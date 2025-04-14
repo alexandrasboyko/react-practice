@@ -24,7 +24,6 @@ const trpcClient = trpc.createClient({
 
 export const TrpcProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    // @ts-expect-error
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </trpc.Provider>
